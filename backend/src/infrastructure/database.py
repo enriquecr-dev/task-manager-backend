@@ -2,8 +2,8 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import DeclarativeBase, sessionmaker
 
 # Hardcoded for now. In production, we will move this to environment variables in the 'core' folder.
-DATABASE_URL = "postgresql+psycopg://admin:admin_password@localhost:5432/task_manager"
-
+# Fíjate que el puerto es 5435 y la contraseña es admin_password
+DATABASE_URL = "postgresql+psycopg://admin:admin_password@localhost:5435/task_manager"
 # The engine is the core interface to the database
 engine = create_engine(DATABASE_URL, echo=True)
 
